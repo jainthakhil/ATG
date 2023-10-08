@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ATG</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/d0bb01e83a.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="account-page" id="account-page">
+      <div class="login-reg-form" id="form">
+        <div class="cross">
+          <a href="" id="cross" class="cross" onclick="crossBtnAction(event)">
+            <img src="images/cancel.png" alt="" />
+          </a>
+        </div>
+
+        <!-- signup page starts -->
+        <div class="main-form signup-form" id="signup-form">
+          <div class="form-head">
+            <h3>
+              Let's learn, share & inspire each other with our passion for
+              computer engineering. Sign up now 🤘🏼
+            </h3>
+          </div>
+          <div class="account-row">
+            <h2 id="create-head">Create Account</h2>
+            <p id="accountpara1">
+              Already have an account?
+              <span><a href="" id="signin">Sign in</a></span>
+            </p>
+            <a
+              href="#"
+              target="_self"
+              class="small-cancel"
+              id="small-cancel"
+              onclick="crossBtnAction(event)"
+              ><img src="images/cancel1.png" alt=""
+            /></a>
+          </div>
+          <div class="form-container">
+            <div class="left">
+              <form action="">
+                <div class="name-section">
+                  <input type="text" placeholder="First Name" />
+                  <input type="text" placeholder="Last Name" />
+                </div>
+                <div class="email-password">
+                  <input type="email" name="" id="" placeholder="Email" />
+                  <input
+                    type="password"
+                    name=""
+                    class="password"
+                    placeholder="Password"
+                  />
+                  <a class="password-eye" id="password-eye"
+                    ><img src="images/eye2.png" alt=""
+                  /></a>
+                  <input
+                    type="password"
+                    name=""
+                    class="password"
+                    placeholder="Confirm Password"
+                  />
+                </div>
+                <div class="button-row">
+                  <button type="submit">Create Account</button>
+                  <a href="" id="small-signin">or, Sign In</a>
+                </div>
+              </form>
+
+              <div class="other-logins">
+                <a class="login-1"
+                  ><img src="images/facebook.png" alt="" />Sign up with
+                  Facebook</a
+                >
+                <a class="login-2"
+                  ><img src="images/google.png" alt="" />Sign up with Google</a
+                >
+              </div>
+              <p class="small-left-para">
+                By signing up, you agree to our Terms & conditions, Privacy
+                policy
+              </p>
+            </div>
+            <div class="right">
+              <img src="images/fotoJoin.png" alt="" />
+              <p>
+                By signing up, you agree to our Terms & conditions, Privacy
+                policy
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- here sigin page starts -->
+        <div class="main-form signin-form" id="signin-form">
+          <div class="form-head">
+            <h3>
+              Let's learn, share & inspire each other with our passion for
+              computer engineering. Sign up now 🤘🏼
+            </h3>
+          </div>
+          <div class="account-row">
+            <h2 id="signin-head">Sign In</h2>
+            <p id="accountpara2">
+              Don't have an account yet?
+              <span><a href="" id="signup">Create new for free!</a> </span>
+            </p>
+            <a href="" class="small-cancel" id="small-cancel"
+              ><img src="images/cancel1.png" alt=""
+            /></a>
+          </div>
+          <div class="form-container">
+            <div class="left">
+              <form action="">
+                <div class="email-password">
+                  <input type="email" name="" id="" placeholder="Email" />
+                  <input
+                    type="password"
+                    name=""
+                    id="password"
+                    placeholder="Password"
+                  />
+                  <a class="password-eye" id="eye"
+                    ><img src="images/eye2.png" alt=""
+                  /></a>
+                </div>
+                <div class="button-row">
+                  <button
+                    type="submit"
+                    id="signin-btn"
+                    onclick="groupBtnAction(event), signinBtnAction(event)"
+                  >
+                    Sign In
+                  </button>
+                  <a href="" id="small-create">or, Create Account</a>
+                </div>
+              </form>
+
+              <div class="other-logins">
+                <a class="login-1"
+                  ><img src="images/facebook.png" alt="" />Sign up with
+                  Facebook</a
+                >
+                <a class="login-2"
+                  ><img src="images/google.png" alt="" />Sign up with Google</a
+                >
+              </div>
+              <div class="forgot">
+                <a href="">Forgot Password?</a>
+              </div>
+            </div>
+            <div class="right">
+              <img src="images/fotoJoin.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- navbar starts -->
+    <div class="nav-container">
+      <div class="logo"><img src="images/whole.png" alt="" /></div>
+      <div class="search">
+        <form action="">
+          <img class="lens" id="lens" src="images/lens.png" alt="" />
+          <input
+            type="text"
+            class="search-input"
+            id="search-input"
+            placeholder="Search for your favourite group in ATG"
+            onfocus="hideSearchImgNText()"
+            onblur="showSearchImgNText()"
+          />
+        </form>
+      </div>
+      <div class="create" id="create">
+        <span>Create account</span>
+        <span
+          ><a
+            href="#middle"
+            class="free"
+            id="createAccount"
+            onclick=" accountAction(event)"
+            >It's free <img src="images/arrow-down.png" alt="" /></a
+        ></span>
+      </div>
+      <div class="logged-in" id="logged">
+        <img class="logged-in-profile-img" src="images/profile4.png" alt="" />
+        <p>Sidddharth Goyal</p>
+        <a href="#middle" id="logged-arrow">
+          <img src="images/arrow-down.png" alt="" />
+        </a>
+      </div>
+    </div>
+
+    <!-- smallnav -->
+    <div class="small-nav">
+      <img src="images/small-nav-icons.png" alt="" />
+    </div>
+    <div class="upper-container">
+      <div class="glass">
+        <div class="back-group">
+          <a href="" class="back"><img src="images/back.png" alt="" /></a>
+          <a
+            href=""
+            class="group"
+            id="group-btn"
+            onclick="groupBtnAction(event)"
+            >Join group</a
+          >
+        </div>
+        <div class="upper-content">
+          <h1>Computer Engineering</h1>
+          <p>142,765 Computer Engineers follow this</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- middle-container -->
+    <div class="middle-container" id="middle">
+      <div class="main-box">
+        <div class="top-bar">
+          <div class="left-bar">
+            <a href="" class="active tab-link">All Posts(32) </a>
+            <a href="" class="tab-link">Article</a>
+            <a href="" class="tab-link">Event</a>
+            <a href="" class="tab-link">Education</a>
+            <a href="" class="tab-link">Job</a>
+          </div>
+          <div class="right-bar">
+            <a href="" class="post-btn"
+              >Write a Post <img src="images/arrow-down.png" alt=""
+            /></a>
+            <a
+              href=""
+              class="join-btn"
+              id="join-btn"
+              onclick="joinBtnAction(event)"
+            >
+              <img src="images/add.png" id="join-btn-img" alt="" />
+              <p id="join-btn-para">Join Group</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="second-top">
+          <div class="post">
+            <a href="" class="active">Posts(328) </a>
+          </div>
+          <div class="filter">
+            <a href="">
+              <p>Filter: All</p>
+              <img src="images/arrow-down.png" alt="" />
+            </a>
+          </div>
+        </div>
+
+        <hr class="hr" />
+
+        <!-- content -->
+        <div class="content">
+          <div class="content-left">
+            <!-- item-1 -->
+            <div class="content-item">
+              <img class="content-img" src="images/content1.png" alt="" />
+              <div class="content-data">
+                <h4>✍️ Article</h4>
+                <div class="profile-head">
+                  <h3>
+                    What if famous brands had regular fonts? Meet RegulaBrands!
+                  </h3>
+                  <a href="" class="more-head">
+                    <img src="images/more.png" alt="" />
+                  </a>
+                </div>
+
+                <p>
+                  I’ve worked in UX for the better part of a decade. From now
+                  on, I plan to rei…
+                </p>
+                <div class="content-detail">
+                  <div class="profile">
+                    <img src="images/profile1.png" alt="" />
+                  </div>
+                  <div class="options">
+                    <div class="name"><h4>Sarthak Kamra</h4></div>
+                    <p><img src="images/eye.png" alt="" />1.4k views</p>
+                  </div>
+                  <div class="share">
+                    <a href="" class="share"
+                      ><img src="images/share.png" alt=""
+                    /></a>
+                    <p>Share</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- item-2 -->
+            <div class="content-item">
+              <img class="content-img" src="images/content2.png" alt="" />
+              <div class="content-data">
+                <h4>🔬️ Education</h4>
+                <div class="profile-head">
+                  <h3>
+                    Tax Benefits for Investment under National Pension Scheme
+                    launched by Government
+                  </h3>
+                  <a href="" class="more-head">
+                    <img src="images/more.png" alt="" />
+                  </a>
+                </div>
+                <p>
+                  I’ve worked in UX for the better part of a decade. From now
+                  on, I plan to rei…
+                </p>
+                <div class="content-detail">
+                  <div class="profile">
+                    <img src="images/profile2.png" alt="" />
+                  </div>
+                  <div class="options">
+                    <div class="name"><h4>Sarah West</h4></div>
+                    <p><img src="images/eye.png" alt="" />1.4k views</p>
+                  </div>
+                  <div class="share">
+                    <a href="" class="share"
+                      ><img src="images/share.png" alt=""
+                    /></a>
+                    <p>Share</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- item-3 -->
+            <div class="content-item">
+              <img class="content-img" src="images/content3.png" alt="" />
+              <div class="content-data">
+                <h4>🗓️ Meetup</h4>
+                <div class="profile-head">
+                  <h3>Finance & Investment Elite Social Mixer @Lujiazui</h3>
+                  <a href="" class="more-head">
+                    <img src="images/more.png" alt="" />
+                  </a>
+                </div>
+
+                <div class="date-loc">
+                  <div class="date">
+                    <img src="images/calender.png" alt="" />
+                    <p>Fri, 12 Oct, 2018</p>
+                  </div>
+                  <div class="loc">
+                    <img src="images/location.png" alt="" />
+                    <p>Ahmedabad, India</p>
+                  </div>
+                </div>
+
+                <div class="visit">
+                  <a href="">Visit Website</a>
+                </div>
+
+                <div class="content-detail">
+                  <div class="profile">
+                    <img src="images/profile3.png" alt="" />
+                  </div>
+                  <div class="options">
+                    <div class="name"><h4>Ronal Jones</h4></div>
+                    <p><img src="images/eye.png" alt="" />1.4k views</p>
+                  </div>
+                  <div class="share">
+                    <a href="" class="share"
+                      ><img src="images/share.png" alt=""
+                    /></a>
+                    <p>Share</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- item-4 -->
+            <div class="content-item">
+              <!-- <img class="content-img" src="images/content3.png" alt="" /> -->
+              <div class="content-data last-item">
+                <h4>💼️ Job</h4>
+                <div class="profile-head">
+                  <h3>Software Developer</h3>
+                  <a href="" class="more-head">
+                    <img src="images/more.png" alt="" />
+                  </a>
+                </div>
+
+                <div class="date-loc">
+                  <div class="date company">
+                    <img src="images/work.png" alt="" />
+                    <p>Innovaccer Analytics Private Ltd.</p>
+                  </div>
+                  <div class="loc">
+                    <img src="images/location.png" alt="" />
+                    <p>Noida, India</p>
+                  </div>
+                </div>
+
+                <div class="visit apply">
+                  <a href="">Apply on Timesjobs</a>
+                </div>
+
+                <div class="content-detail">
+                  <div class="profile">
+                    <img src="images/profile4.png" alt="" />
+                  </div>
+                  <div class="options">
+                    <div class="name"><h4>Joseph Gray</h4></div>
+                    <p><img src="images/eye.png" alt="" />1.4k views</p>
+                  </div>
+                  <div class="share">
+                    <a href="" class="share"
+                      ><img src="images/share.png" alt=""
+                    /></a>
+                    <p>Share</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-right">
+            <div class="right-main">
+              <div class="location">
+                <div class="loc-detail">
+                  <img src="images/location.png" alt="" />
+                  <p id="right-loc">Noida, India</p>
+                </div>
+                <a href="" class="edit">
+                  <img src="images/edit.png" id="edit-img" alt="" />
+                </a>
+              </div>
+              <hr />
+              <div class="loc-para">
+                <img src="images/error.png" alt="" />
+                <p>
+                  Your location will help us serve better and extend a
+                  personalised experience.
+                </p>
+              </div>
+              <div class="right-group" id="right-group">
+                <div class="group-head">
+                  <img src="images/thumb.png" alt="" />
+                  <h3>RECOMMENDED GROUPS</h3>
+                </div>
+                <div class="group-items">
+                  <div class="gp-item">
+                    <div class="gp-profile">
+                      <img src="images/profile5.png" alt="" />
+                      <p>Leisure</p>
+                    </div>
+                    <a href="" class="follow-btn">Follow</a>
+                  </div>
+                  <div class="gp-item">
+                    <div class="gp-profile">
+                      <img src="images/profile6.png" alt="" />
+                      <p>Activism</p>
+                    </div>
+                    <a href="" class="follow-btn">Follow</a>
+                  </div>
+                  <div class="gp-item">
+                    <div class="gp-profile">
+                      <img src="images/profile7.png" alt="" />
+                      <p>MBA</p>
+                    </div>
+                    <a href="" class="follow-btn">Follow</a>
+                  </div>
+                  <div class="gp-item">
+                    <div class="gp-profile">
+                      <img src="images/profile8.png" alt="" />
+                      <p>Philosophy</p>
+                    </div>
+                    <a href="" class="follow-btn">Follow</a>
+                  </div>
+                </div>
+                <a href="" class="seemore">See More..</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
